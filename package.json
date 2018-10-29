@@ -1,0 +1,27 @@
+{
+  "name": "@sbspk/object-path",
+  "version": "0.0.1",
+  "description": "Object manipulation with keyPaths",
+  "main": "lib/object-path.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Subash/object-path.git"
+  },
+  "keywords": [
+    "object",
+    "key",
+    "keyPath"
+  ],
+  "author": "Subash Pathak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Subash/object-path/issues"
+  },
+  "homepage": "https://github.com/Subash/object-path#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
