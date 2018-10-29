@@ -8,7 +8,7 @@ npm install --save @sbspk/object-path
 ### Usage
 
 ```js
-const op = require('object-path');
+const op = require('@sbspk/object-path');
 
 const data = {
   inner: {
