@@ -1,7 +1,7 @@
 {
   "name": "@sbspk/object-path",
   "version": "0.0.1",
-  "description": "Object manipulation with keyPaths",
+  "description": "Read and Manipulate Objects with Key Path",
   "main": "lib/object-path.js",
   "scripts": {
     "test": "jest"
