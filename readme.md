@@ -1,4 +1,4 @@
-# Read and Manipulate Objects with Key Path
+Read and manipulate objects with key paths
 
 ### Installation
 ```shell
