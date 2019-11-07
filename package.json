@@ -2,7 +2,7 @@
   "name": "@sbspk/object-path",
   "version": "0.0.2",
   "description": "Read and Manipulate Objects with Key Path",
-  "main": "lib/object-path.js",
+  "main": "object-path.js",
   "scripts": {
     "test": "jest"
   },
@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/Subash/object-path#readme",
   "devDependencies": {
-    "jest": "^23.6.0"
+    "jest": "^24.9.0"
   }
 }
