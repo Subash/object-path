@@ -27,7 +27,7 @@ test('Test get()', ()=> {
 });
 
 test('Test set()', ()=> {
-  op.set(object, 'c.b.k'); //This should do nothing
+  op.set(object, 'c.b.k'); // this should do nothing
   op.set(object, 'rick.morty', { wuba: 'luba', dubb: 'dubb' });
   expect(op.get(object, 'c.b.k')).not.toBeDefined();
   expect(op.get(object, 'rick.morty.dubb')).toEqual('dubb');
@@ -36,7 +36,7 @@ test('Test set()', ()=> {
 
 test('Test unset()', ()=> {
   op.unset(object, 'c.e.a.a.a.a');
-  op.unset(object, 'c.b.k'); //This should do nothing
+  op.unset(object, 'c.b.k'); // this should do nothing
   expect(op.get(object, 'c.b')).toEqual('cb');
   expect(op.get(object, 'c.e.a.a.a.a')).not.toBeDefined();
   expect(op.get(object, 'c.e.a.a.a')).not.toBeDefined();

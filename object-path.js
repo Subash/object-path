@@ -52,7 +52,7 @@ function unset(object, keyPath) {
     const innerObject = object[key];
     if(!isObject(innerObject)) return;
     unset(innerObject, joinKeys(innerKeys));
-    // If an object becomes empty after deleting a child key, delete that object as well
+    // delete object if it has no children
     if(isEmpty(innerObject)) delete object[key];
   } else {
     delete object[key];

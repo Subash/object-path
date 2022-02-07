@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/Subash/object-path#readme",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^27.5.0"
   }
 }
