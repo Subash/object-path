@@ -1,6 +1,6 @@
 {
   "name": "@sbspk/object-path",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Read and Manipulate Objects with Key Path",
   "main": "lib/object-path.js",
   "types": "lib/object-path.d.ts",
