@@ -1,8 +1,16 @@
 export type PlainObject = {
-  [key: string]: string | number | boolean | null | undefined | PlainObject;
+  [key: string]: Value;
 };
 
-export type Value = PlainObject[keyof PlainObject];
+export type PlainValue =
+  | string
+  | number
+  | boolean
+  | null
+  | undefined
+  | PlainObject;
+
+export type Value = PlainValue | PlainValue[];
 
 function isObjectEmpty(object: PlainObject): boolean {
   return Object.keys(object).length === 0;
