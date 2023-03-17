@@ -1,0 +1,13 @@
+{
+  "include": ["./src/"],
+  "compilerOptions": {
+    "declaration": true,
+    "esModuleInterop": true,
+    "lib": ["ES2022"],
+    "module": "CommonJS",
+    "noImplicitAny": true,
+    "outDir": "./lib",
+    "strict": true,
+    "target": "ES2022"
+  }
+}

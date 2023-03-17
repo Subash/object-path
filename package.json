@@ -1,27 +1,29 @@
 {
   "name": "@sbspk/object-path",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Read and Manipulate Objects with Key Path",
-  "main": "object-path.js",
-  "scripts": {
-    "test": "jest"
-  },
+  "main": "lib/object-path.js",
+  "types": "lib/object-path.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Subash/object-path.git"
   },
-  "keywords": [
-    "object",
-    "key",
-    "keyPath"
-  ],
   "author": "Subash Pathak",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Subash/object-path/issues"
   },
   "homepage": "https://github.com/Subash/object-path#readme",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf lib",
+    "prepublishOnly": "npm run clean && npm run build",
+    "test": "jest"
+  },
   "devDependencies": {
-    "jest": "^27.5.0"
+    "@jest/globals": "^29.3.1",
+    "jest": "^29.3.1",
+    "ts-jest": "^29.0.3",
+    "typescript": "^5.0.2"
   }
 }

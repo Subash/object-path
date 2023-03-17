@@ -1,4 +1,5 @@
 ### Installation
+
 ```shell
 npm install --save @sbspk/object-path
 ```
@@ -6,17 +7,17 @@ npm install --save @sbspk/object-path
 ### Usage
 
 ```js
-const op = require('@sbspk/object-path');
+import { get, set, unset } from "@sbspk/object-path";
 
 const data = {
   inner: {
-    a: 'b'
-  }
-}
+    a: "b",
+  },
+};
 
-op.get(data, 'inner.a'); // returns b
-op.set(data, 'inner.a', 'c'); // sets the value to c
-op.unset(data, 'inner.a') // removes a and inner because inner becomes empty after deleting a
-op.set(data, 'hello.world', { greeting: 'Namaste' }); // sets data.hello.world.greeting
-op.get(data, 'hello.world.greeting'); // returns 'Namaste'
+get(data, "inner.a"); // returns b
+set(data, "inner.a", "c"); // sets the value to c
+unset(data, "inner.a"); // removes a and inner because inner becomes empty after unsetting a
+set(data, "hello.world", { greeting: "Namaste" }); // sets data.hello.world.greeting
+get(data, "hello.world.greeting"); // returns 'Namaste'
 ```

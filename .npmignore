@@ -1,6 +1,8 @@
-.DS_Store
-.editorconfig
-.github
+/.github
 /coverage
 /node_modules
+/src
 /tests
+.DS_Store
+.jest.config.js
+tsconfig.json
