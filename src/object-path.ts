@@ -1,16 +1,4 @@
-export type PlainObject = {
-  [key: string]: Value;
-};
-
-export type PlainValue =
-  | string
-  | number
-  | boolean
-  | null
-  | undefined
-  | PlainObject;
-
-export type Value = PlainValue | PlainValue[];
+export type PlainObject = Record<string, unknown>;
 
 function isObjectEmpty(object: PlainObject): boolean {
   return Object.keys(object).length === 0;
@@ -32,7 +20,7 @@ function joinKeys(keys: string[]): string {
   return keys.join(".");
 }
 
-function set(object: PlainObject, keyPath: string, value: Value): void {
+function set(object: PlainObject, keyPath: string, value: unknown): void {
   const [key, ...innerKeys] = splitKeys(keyPath);
   if (innerKeys.length) {
     const innerObject = object[key] ?? {};
@@ -56,7 +44,7 @@ function unset(object: PlainObject, keyPath: string): void {
   }
 }
 
-function get(object: PlainObject, keyPath: string): Value {
+function get(object: PlainObject, keyPath: string): unknown {
   const [key, ...innerKeys] = splitKeys(keyPath);
   if (innerKeys.length) {
     const innerObject = object[key];
