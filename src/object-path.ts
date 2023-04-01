@@ -1,6 +1,4 @@
-type PlainObject = Record<string, unknown>;
-
-function isPlainObject(object: unknown): object is PlainObject {
+function isPlainObject(object: unknown): object is Record<string, unknown> {
   return (
     object !== null &&
     typeof object === "object" &&
@@ -8,7 +6,7 @@ function isPlainObject(object: unknown): object is PlainObject {
   );
 }
 
-function isObjectEmpty(object: PlainObject): boolean {
+function isObjectEmpty(object: Record<string, unknown>): boolean {
   return Object.keys(object).length === 0;
 }
 
