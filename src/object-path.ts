@@ -1,8 +1,4 @@
-export type PlainObject = Record<string, unknown>;
-
-function isObjectEmpty(object: PlainObject): boolean {
-  return Object.keys(object).length === 0;
-}
+type PlainObject = Record<string, unknown>;
 
 function isPlainObject(object: unknown): object is PlainObject {
   return (
@@ -10,6 +6,10 @@ function isPlainObject(object: unknown): object is PlainObject {
     typeof object === "object" &&
     object.constructor === Object
   );
+}
+
+function isObjectEmpty(object: PlainObject): boolean {
+  return Object.keys(object).length === 0;
 }
 
 function splitKeys(keyPath: string): string[] {
@@ -20,7 +20,11 @@ function joinKeys(keys: string[]): string {
   return keys.join(".");
 }
 
-function set(object: PlainObject, keyPath: string, value: unknown): void {
+export function set(
+  object: Record<string, unknown>,
+  keyPath: string,
+  value: unknown
+): void {
   const [key, ...innerKeys] = splitKeys(keyPath);
   if (innerKeys.length) {
     const innerObject = object[key] ?? {};
@@ -32,7 +36,7 @@ function set(object: PlainObject, keyPath: string, value: unknown): void {
   }
 }
 
-function unset(object: PlainObject, keyPath: string): void {
+export function unset(object: Record<string, unknown>, keyPath: string): void {
   const [key, ...innerKeys] = splitKeys(keyPath);
   if (innerKeys.length) {
     const innerObject = object[key];
@@ -44,7 +48,7 @@ function unset(object: PlainObject, keyPath: string): void {
   }
 }
 
-function get(object: PlainObject, keyPath: string): unknown {
+export function get(object: Record<string, unknown>, keyPath: string): unknown {
   const [key, ...innerKeys] = splitKeys(keyPath);
   if (innerKeys.length) {
     const innerObject = object[key];
@@ -54,5 +58,3 @@ function get(object: PlainObject, keyPath: string): unknown {
     return object[key];
   }
 }
-
-export { set, unset, get };
